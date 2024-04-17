@@ -8,7 +8,6 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    // Получение имени хоста
     hostname, err := os.Hostname()
     if err != nil {
         fmt.Fprintf(w, "<html><body>Error - unable to get hostname: %v</body></html>", err)
