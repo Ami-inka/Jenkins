@@ -14,13 +14,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    // Генерация цвета на основе хеша имени хоста
     hash := sha1.New()
     hash.Write([]byte(hostname))
     hashBytes := hash.Sum(nil)
-    color := fmt.Sprintf("#%02x%02x%02x", hashBytes[0], hashBytes[1], hashBytes[2]) // Используем первые три байта хеша для создания цвета
+    color := fmt.Sprintf("#%02x%02x%02x", hashBytes[0], hashBytes[1], hashBytes[2]) 
 
-    // Форматирование ответа с фоновым цветом
     fmt.Fprintf(w, "<html><body style='background-color:%s'>Container ID: %s</body></html>", color, hostname)
 }
 
