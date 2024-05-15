@@ -12,7 +12,7 @@ WORKDIR /root/
 
 COPY --from=builder /app/webserver .
 
-EXPOSE 8080
+EXPOSE 1234
 
 CMD ["./webserver"]
 
