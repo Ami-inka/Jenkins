@@ -20,6 +20,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     color := fmt.Sprintf("#%02x%02x%02x", hashBytes[0], hashBytes[1], hashBytes[2]) 
 
     fmt.Fprintf(w, "<html><body style='background-color:%s'>Container ID: %s</body></html>", color, hostname)
+    fmt.Fprintf(w, "<html><body>Testing of Jenkins (starting by new push on GitHub)</body></html>")
 }
 
 func main() {
