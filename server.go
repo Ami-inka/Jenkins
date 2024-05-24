@@ -24,6 +24,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 
+
 func main() {
     http.HandleFunc("/", handler)
     fmt.Println("Сервер запущен на http://localhost:8080")
