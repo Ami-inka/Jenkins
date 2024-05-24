@@ -23,6 +23,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "<html><body>Testing of Jenkins (starting by new push on GitHub)</body></html>")
 }
 
+
 func main() {
     http.HandleFunc("/", handler)
     fmt.Println("Сервер запущен на http://localhost:8080")
